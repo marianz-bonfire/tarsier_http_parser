@@ -1,5 +1,3 @@
-/// # Tarsier HTTP Parser
-///
 /// A library to simplify HTTP response parsing and error handling in Dart.
 ///
 /// ## Features:

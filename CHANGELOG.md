@@ -1,3 +1,10 @@
+## 1.0.1
+
+* Upgraded environment SDK constraint
++ Added topics and screenshot
++ Added Github workflows
+* Fixed issue on reported pub dev analysis warning
+
 ## 1.0.0
 
 - Initial release of `TarsierHttpClient`.

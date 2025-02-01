@@ -26,7 +26,7 @@ class Result<T> {
   /// Executes the [callback] if the result represents a success.
   Result<T> onSuccess(void Function(T data) callback) {
     if (isSuccess && data != null) {
-      callback(data!);
+      callback(data as T);
     }
     return this;
   }
