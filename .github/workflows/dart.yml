@@ -1,0 +1,41 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Dart CI
+
+on:
+  push:
+    branches: [ "master" ]
+    paths-ignore: [ '**.md', 'example/**' ]
+  pull_request:
+    branches: [ "master" ]
+    paths-ignore: [ '**.md', 'example/**' ]
+  schedule:
+    # Runs at 00:00 UTC on the 1, 8, 15, 22 and 29th of every month.
+    - cron: '0 0 */7 * *'
+  workflow_dispatch:
+
+jobs:
+  build-dart:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        sdk: [ beta, stable, 3.2.1 ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1.6.0
+        with:
+          sdk: ${{ matrix.sdk }}
+
+      - name: Print Dart version
+        run: dart --version
+
+      - name: Format code
+        #if: ${{ matrix.sdk == 'stable' }}
+        run: dart format .

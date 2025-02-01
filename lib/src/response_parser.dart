@@ -96,7 +96,7 @@ class ResponseParser {
         List<dynamic> errors = body['errors'] ?? [];
         for (var element in errors) {
           if (element is Map<String, dynamic>) {
-            Map<String, dynamic> errors = element ?? {};
+            Map<String, dynamic> errors = element;
             errors.forEach((key, value) {
               value.forEach((element) {
                 errorMessage += element + '\n';

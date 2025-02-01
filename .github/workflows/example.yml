@@ -1,0 +1,40 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Build Example 
+
+on:
+  push:
+    branches: [ "master" ]
+    paths-ignore: [ '**.md' ]
+  pull_request:
+    branches: [ "master" ]
+    paths-ignore: [ '**.md' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./example
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print Flutter SDK version
+        run: flutter --version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Format code
+        run: dart format lib --set-exit-if-changed
+
+      - name: Analyze
+        run: flutter analyze lib
+
+      #- name: Build Debug APK
+      #  run: flutter build apk --debug --no-shrink
+
