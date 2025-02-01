@@ -115,5 +115,5 @@ This project is licensed under the [MIT License](https://mit-license.org/). See 
 Contributions are welcome! Please submit a pull request or file an issue for any bugs or feature requests
 on [GitHub](https://github.com/marianz-bonfire/tarsier_http_parser).
 
-#### Why "Tarsier Logger"?
+#### Why "Tarsier"?
 The tarsier, one of the smallest primates, symbolizes simplicity and adaptability—just like this package! 🐒
