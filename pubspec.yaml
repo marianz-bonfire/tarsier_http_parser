@@ -1,6 +1,6 @@
 name: tarsier_http_parser
 description: A lightweight and flexible Dart HTTP client designed for making API calls with dynamic response parsing.
-version: 1.0.2
+version: 1.1.0
 homepage: https://github.com/marianz-bonfire/tarsier_http_parser
 repository: https://github.com/marianz-bonfire/tarsier_http_parser
 issue_tracker: https://github.com/marianz-bonfire/tarsier_http_parser/issues

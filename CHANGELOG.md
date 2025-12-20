@@ -1,3 +1,20 @@
+## 1.1.0
+- feat: major refactor for multi-type support and retry logic
+- feat: implement exponential backoff retry strategy
+- feat: enhance ResponseParser with multi-format error handling
+- BREAKING CHANGE: new API with method-level type parameters
+- docs: comprehensive documentation and examples
+
+- :feat: add custom retry predicate support
+- feat: implement HTML error page parsing
+- feat: add support for custom success status codes
+- feat: add per-request configuration overrides
+
+- fix: resolve void type comparison issue
+- fix: improve empty response handling
+- perf: optimize retry delay calculations
+- refactor: simplify error handling flow
+
 ## 1.0.2
 - Updated dependency versions to latest stable releases
 - Improved Dart 3 analysis and linting configuration

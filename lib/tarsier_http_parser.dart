@@ -33,6 +33,6 @@
 
 library;
 
-export 'src/tarsier_http_parser_base.dart';
 export 'src/response_parser.dart';
 export 'src/result.dart';
+export 'src/tarsier_http_parser_base.dart';

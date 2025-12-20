@@ -20,8 +20,7 @@ class Result<T> {
   factory Result.success(T data) => Result._(data: data);
 
   /// Factory method to create an error result.
-  factory Result.error(String errorMessage) =>
-      Result._(errorMessage: errorMessage);
+  factory Result.error(String errorMessage) => Result._(errorMessage: errorMessage);
 
   /// Executes the [callback] if the result represents a success.
   Result<T> onSuccess(void Function(T data) callback) {
