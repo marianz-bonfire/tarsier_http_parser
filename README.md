@@ -43,7 +43,7 @@ Add the following to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  tarsier_http_parser: ^1.0.1
+  tarsier_http_parser: ^1.0.2
 ```
 Run the following command:
 ```bash
@@ -52,7 +52,7 @@ flutter pub get
 ## 📒 Usage
 - ### Define a Data Model
 Create a data model that includes a `fromJson` factory constructor:
-```Dart
+```dart
 class User {
   final String id;
   final String name;
@@ -69,13 +69,13 @@ class User {
 ```
 - ### Initialize the HTTP Client
 Create an instance of TarsierHttpClient with the fromJson function for single object:
-```Dart
+```dart
 final client = TarsierHttpClient<User>(
   fromJson: (json) => User.fromJson(json as Map<String, dynamic>),
 );
 ```
 For a list of objects:
-```Dart
+```dart
 final client = TarsierHttpClient<List<User>>(
     fromJson: (json) => (json as List).map((item) => User.fromJson(item)).toList(),
 );
@@ -83,7 +83,7 @@ final client = TarsierHttpClient<List<User>>(
 
 - ### Make HTTP Requests
 GET Request
-```Dart
+```dart
 final result = await client.get(Uri.parse('https://api.example.com/user'));
 
 result
@@ -91,7 +91,7 @@ result
   .onError((error) => print('Error: $error'));
 ```
 POST Request
-```Dart
+```dart
 final postResult = await client.post(
   Uri.parse('https://api.example.com/user'),
   body: {'name': 'New User'},

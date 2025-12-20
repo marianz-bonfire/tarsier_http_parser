@@ -31,7 +31,7 @@
 ///
 /// For more details, check the documentation of the exported classes and methods.
 
-library tarsier_http_parser;
+library;
 
 export 'src/tarsier_http_parser_base.dart';
 export 'src/response_parser.dart';
